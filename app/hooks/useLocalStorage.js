@@ -37,7 +37,9 @@ const useLocalStorage = (key, defaultValue) => {
     } else {
       newValue = valueOrFn;
     }
-    localStorage.setItem(key, JSON.stringify(newValue));
+    if (typeof window !== "undefined") {
+      localStorage.setItem(key, JSON.stringify(newValue));
+    }
     setLocalStorageValue(newValue);
   };
   return [localStorageValue, setLocalStorageStateValue];
