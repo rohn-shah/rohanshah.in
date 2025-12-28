@@ -1,11 +1,7 @@
-"use client";
-import React from "react";
 import LinkButton from "./LinkButton";
 import ThemeSwitcher from "./ThemeSwitcher";
 
-const Header = (props) => {
-	const { theme, setTheme, setPreviouslySelectedTheme } = props;
-
+const Header = () => {
 	return (
 		<nav className="p-5">
 			<div className="container mx-auto flex flex-wrap items-center justify-between text-lg">
@@ -17,11 +13,7 @@ const Header = (props) => {
 					>
 						Let's Connect
 					</LinkButton>
-					<ThemeSwitcher
-						theme={theme}
-						setTheme={setTheme}
-						setPreviouslySelectedTheme={setPreviouslySelectedTheme}
-					/>
+					<ThemeSwitcher />
 				</div>
 			</div>
 		</nav>

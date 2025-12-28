@@ -50,7 +50,7 @@
   --tw-border-opacity: 1;
 }
 
-[data-theme="dark"] {
+html[data-theme="dark"] {
   --foreground-rgb: 255, 255, 255;
   --background: linear-gradient(
     135deg,
@@ -72,9 +72,10 @@
   --btn-primary-border: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
-main {
+body {
   color: rgb(var(--foreground-rgb));
   background-image: var(--background);
+  min-height: 100vh;
 }
 
 @font-face {
@@ -85,7 +86,7 @@ main {
 }
 
 .textColor {
-  color: --text-primary;
+  color: var(--text-primary);
   font-family: FiraMono, Verdana, sans-serif;
 }
 

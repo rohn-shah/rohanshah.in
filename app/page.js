@@ -1,40 +1,11 @@
-"use client";
-import { useEffect, useState } from "react";
-
-// Components
 import Header from "./components/Header";
 import Divider from "./components/Divider";
 import SocialMediaLinks from "./components/SocialMediaLinks";
 
-// Hooks
-import useLocalStorage from "./hooks/useLocalStorage";
-
 export default function Home() {
-	const [theme, setTheme] = useState("light");
-	const [previouslySelectedTheme, setPreviouslySelectedTheme] = useLocalStorage(
-		"theme",
-		"",
-	);
-
-	useEffect(() => {
-		if (previouslySelectedTheme) {
-			setTheme(previouslySelectedTheme);
-		} else {
-			// Fallback
-			const prefersDark = window.matchMedia(
-				"(prefers-color-scheme: dark)",
-			).matches;
-			setTheme(prefersDark ? "dark" : "light");
-		}
-	}, [previouslySelectedTheme]);
-
 	return (
-		<main className="min-h-screen flex flex-col" data-theme={theme}>
-			<Header
-				theme={theme}
-				setTheme={setTheme}
-				setPreviouslySelectedTheme={setPreviouslySelectedTheme}
-			/>
+		<main className="min-h-screen flex flex-col">
+			<Header />
 			<div className="flex-1 grid place-items-center p-8">
 				<div className="w-full lg:w-7/12 gap-8 flex flex-col">
 					<div className="text-2xl lg:text-3xl font-[FiraMono]">{`Hello world! 👋`}</div>

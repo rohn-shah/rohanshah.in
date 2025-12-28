@@ -1,20 +1,26 @@
 "use client";
-import React from "react";
+import { useEffect, useState } from "react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 
-const ThemeSwitcher = ({ theme, setTheme, setPreviouslySelectedTheme }) => {
-	const toggleDarkMode = (checked) => {
-		const selectedTheme = checked ? "dark" : "light";
-		setTheme(selectedTheme);
-		setPreviouslySelectedTheme(selectedTheme);
-	};
+const ThemeSwitcher = () => {
+	const [theme, setTheme] = useState("light");
 
-	const isDarkMode = theme === "dark";
+	useEffect(() => {
+		const currentTheme = document.documentElement.dataset.theme || "light";
+		setTheme(currentTheme);
+	}, []);
+
+	const toggleDarkMode = (checked) => {
+		const newTheme = checked ? "dark" : "light";
+		setTheme(newTheme);
+		document.documentElement.dataset.theme = newTheme;
+		localStorage.setItem("theme", JSON.stringify(newTheme));
+	};
 
 	return (
 		<DarkModeSwitch
 			className="ml-2 md:ml-4"
-			checked={isDarkMode}
+			checked={theme === "dark"}
 			onChange={toggleDarkMode}
 			size={27}
 		/>
