@@ -60,61 +60,8 @@ main {
   font-style: normal;
 }
 
-.tinyLineContainer {
-  scale: 2;
-  width: 50%;
-  margin: 0 auto;
-  height: 20px;
-  top: 25px;
-}
-
-.tinyLine {
-  position: absolute;
-  /* Cuts off the bottom half of the pattern */
-  height: 20px;
-  /* For better cross browser consistency, make it larger with width.  */
-  width: 1000%;
-  /* And then scale it back down with scale, recentering with translateX. */
-  transform: translateX(-45%) scale(0.1);
-}
-
-.tinyLine1 {
-  background: linear-gradient(
-    45deg,
-    transparent,
-    transparent 49%,
-    var(--line-color) 49%,
-    transparent 51%
-  );
-}
-.tinyLine2 {
-  background: linear-gradient(
-    -45deg,
-    transparent,
-    transparent 49%,
-    var(--line-color) 49%,
-    transparent 51%
-  );
-}
-.tinyLine {
-  /* Must be after background definition. */
-  background-size: 40px 40px;
-}
-
-.shadows {
-  margin-top: 16px;
-}
-
 .textColor {
   color: --text-primary;
   font-family: FiraMono, Verdana, sans-serif;
 }
 
-.btn-primary {
-  background: var(--btn-primary-bg);
-  @apply flex text-xs lg:text-sm gap-2 items-center bg-opacity-5 p-2 px-4 rounded-lg;
-}
-
-.btn-primary:hover {
-  border-color: var(--btn-primary-border);
-}
