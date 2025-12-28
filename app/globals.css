@@ -54,15 +54,8 @@ main {
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("Jost-VariableFont_wght.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ShareTechMono";
-  src: url("FiraMono-Regular.ttf");
+  font-family: "FiraMono";
+  src: url("/assets/fonts/FiraMono-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -114,7 +107,7 @@ main {
 
 .textColor {
   color: --text-primary;
-  font-family: ShareTechMono, Verdana, sans-serif;
+  font-family: FiraMono, Verdana, sans-serif;
 }
 
 .btn-primary {
