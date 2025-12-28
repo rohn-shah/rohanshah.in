@@ -15,13 +15,16 @@ const Header = (props) => {
 	const isDarkMode = theme === "dark";
 
 	return (
-		<nav class="p-5">
-			<div class="container mx-auto flex flex-wrap items-center justify-between text-lg">
+		<nav className="p-5">
+			<div className="container mx-auto flex flex-wrap items-center justify-between text-lg">
 				<span style={{ fontFamily: "FiraMono", fontSize: "1.2rem" }}>
 					Rohan.
 				</span>
-				<div class="flex justify-between items-center gap-2">
-					<LinkButton href="mailto:rohanshah945@gmail.com" className="w-max">
+				<div className="flex justify-between items-center gap-2">
+					<LinkButton
+						href="mailto:rohanshah945@gmail.com"
+						classNameName="w-max"
+					>
 						Let's Connect
 					</LinkButton>
 					<DarkModeSwitch

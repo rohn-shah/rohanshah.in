@@ -15,7 +15,7 @@ export default function LinkButton({
 	return (
 		<Link
 			href={href}
-			className={`flex text-xs lg:text-sm gap-2 items-center bg-opacity-5 p-2 px-4 rounded-lg bg-[var(--btn-primary-bg)] hover:border-[var(--btn-primary-border)] ${className}`}
+			className={`flex text-xs lg:text-sm gap-2 items-center bg-opacity-5 p-2 px-4 rounded-lg bg-(--btn-primary-bg) hover:border-(--btn-primary-border) ${className}`}
 			{...externalProps}
 		>
 			{children}
