@@ -35,12 +35,9 @@ export default function Home() {
 				setTheme={setTheme}
 				setPreviouslySelectedTheme={setPreviouslySelectedTheme}
 			/>
-			<div className="flex flex-1 flex-col items-center justify-center p-8 lg:p-24 lg:pb-52 gap-1">
-				<div className="w-full p-0 lg:w-7/12 lg:p-12 box-border gap-8 flex flex-col">
-					<div
-						className="text-2xl lg:text-3xl"
-						style={{ fontFamily: "FiraMono" }}
-					>{`Hello world! 👋`}</div>
+			<div className="flex-1 grid place-items-center p-8">
+				<div className="w-full lg:w-7/12 gap-8 flex flex-col">
+					<div className="text-2xl lg:text-3xl font-[FiraMono]">{`Hello world! 👋`}</div>
 					<div className="text-xs lg:text-sm textColor">
 						My name is Rohan Shah. I am a Fullstack Developer from India having
 						over three years of experience in web app development. I am
