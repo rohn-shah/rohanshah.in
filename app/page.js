@@ -11,8 +11,8 @@ export default function Home() {
 					<div className="text-2xl lg:text-3xl font-[FiraMono]">{`Hello world! 👋`}</div>
 					<div className="text-xs lg:text-sm textColor">
 						My name is Rohan Shah. I am a Fullstack Developer from India having
-						over three years of experience in web app development. I am
-						currently working as a Frontend Engineer at <i>Sequoia</i>.
+						over five years of experience in web app development. I am currently
+						working as a Frontend Engineer at <i>Sequoia</i>.
 						<br />
 						<br />
 						In my previous role at <i>200OK Solutions</i>, I helped a number of
