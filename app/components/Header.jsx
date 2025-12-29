@@ -7,10 +7,7 @@ const Header = () => {
 			<div className="container mx-auto flex flex-wrap items-center justify-between text-lg">
 				<span className="font-[FiraMono] text-[1.5rem]">Rohan.</span>
 				<div className="flex justify-between items-center gap-2">
-					<LinkButton
-						href="mailto:rohanshah945@gmail.com"
-						classNameName="w-max"
-					>
+					<LinkButton href="mailto:me@rohanshah.in" classNameName="w-max">
 						Let's Connect
 					</LinkButton>
 					<ThemeSwitcher />
